@@ -1,0 +1,5 @@
+#!/bin/bash
+exec 2>&1
+source /etc/envvars
+
+exec sudo -u www-data LD_LIBRARY_PATH=/usr/local/lib/ /usr/local/bin/renderd -f --config /etc/renderd.conf
